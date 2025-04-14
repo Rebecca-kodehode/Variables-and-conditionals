@@ -29,9 +29,9 @@ let text = "Violet";
 let number = 20;
 let isHuman = true;
 let noValue = null;
-let undefined = undefined;
+let undefinert = undefined;
 let person = { name: "Violet", age: 20 };
-let dragonColors = [ "Blue", "Green", "Red", "Brown", "Black" ];
+let dragonColors = ["Blue", "Green", "Red", "Brown", "Black"];
 
 /******************************************************************************
 OPPGAVE 3
@@ -52,10 +52,12 @@ console.log(a - b);
 console.log(a * b);
 console.log(a / b);
 
-console.log(a ++ b);
-console.log(a -- b);
-console.log(a += b);
-console.log(a -= b);
+console.log(a--);
+console.log(--a);
+console.log(b--);
+console.log(--b);
+console.log((a += b));
+console.log((a -= b));
 
 /******************************************************************************
 OPPGAVE 4
@@ -85,12 +87,31 @@ let userIsBlocked = false;
 let goToPage = "";
 
 // Skriv koden for oppgave 4 her
-if ( userName >= "") {
-    console.log("No username");
+if (userName == "") {
+  console.log("No username");
 } else {
-    console.log("You hva a username.");
+  console.log("You hva a username.");
 }
 
+if (userAge >= 18) {
+  console.log("You are old enough!");
+} else {
+  console.log("You are too young.");
+}
+
+if (userIsBlocked === true) {
+  console.log("You are free to enter.");
+} else {
+  console.log("You are blocked");
+}
+
+if (userName !== "" && userAge >= 18 && userIsBlocked === false) {
+  userIsLoggedIn = true;
+  goToPage = "/home";
+  console.log("Welcome, " + userName + "!");
+} else {
+  console.log("You can not log in.");
+}
 /******************************************************************************
 OPPGAVE 5
 
@@ -109,3 +130,6 @@ at betingelsen din fungerer som den skal.
 const userMale = false;
 
 // Skriv koden for oppgave 5 her
+const userTitle = userMale ? "Mr" : "Mrs";
+
+console.log(userTitle);
